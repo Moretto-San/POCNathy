@@ -106,6 +106,7 @@ public class MainActivity extends AppCompatActivity implements
                 signIn(mEmailField.getText().toString(), mPasswordField.getText().toString());
             } else if (i == R.id.sign_out_button) {
              //   signOut();
+                //
             }
         }
 
