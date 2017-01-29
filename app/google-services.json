@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "169190983681",
+    "firebase_url": "https://pocnathy.firebaseio.com",
+    "project_id": "pocnathy",
+    "storage_bucket": "pocnathy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:169190983681:android:6bc52a7e6dfd4a66",
+        "android_client_info": {
+          "package_name": "com.example.rafae.pocnathy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "169190983681-vg6mq3m1ramekr4f2hu32qlb84m90p8l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rafae.pocnathy",
+            "certificate_hash": "F8272EB8AB3347D77199BD50F30A1590C6C60BA8"
+          }
+        },
+        {
+          "client_id": "169190983681-anrhkgvdemm5c6n258sn0u4flk3llp1o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_lKW6k1OroPUL-k0HgyIIXfYMiBWEoTI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "169190983681-anrhkgvdemm5c6n258sn0u4flk3llp1o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
