@@ -1,5 +1,7 @@
 package com.example.rafae.pocnathy;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -18,18 +20,22 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity implements
         View.OnClickListener{
 
-    private static final String TAG = "TESTE";
+    private static final String TAG = "MainActivity";
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
     private EditText mEmailField;
     private EditText mPasswordField;
 
+    private Context context;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+        context = this.getApplicationContext();
 
         // Views
         mEmailField = (EditText) findViewById(R.id.field_email);
@@ -53,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements
                     Log.d(TAG, "onAuthStateChanged:signed_out");
                 }
                 // ...
+
             }
         };
     }
@@ -97,6 +104,7 @@ public class MainActivity extends AppCompatActivity implements
 
     }
 
+
         @Override
         public void onClick(View v) {
             int i = v.getId();
@@ -125,13 +133,14 @@ public class MainActivity extends AppCompatActivity implements
                         // signed in user can be handled in the listener.
                         if (!task.isSuccessful()) {
                             Log.w(TAG, "signInWithEmail:failed", task.getException());
-                            Toast.makeText(MainActivity.this, R.string.auth_failed,
-                                    Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this, R.string.auth_failed, Toast.LENGTH_SHORT).show();
                         }else{
-                        Toast.makeText(MainActivity.this, "Logado com sucesso",
-                                Toast.LENGTH_SHORT).show();
-                    }
+                            Toast.makeText(MainActivity.this, "Logado com sucesso", Toast.LENGTH_SHORT).show();
 
+                            Intent intent = new Intent(context, SegundaActivity.class);
+                            startActivity(intent);
+
+                        }
 
                     }
                 });
